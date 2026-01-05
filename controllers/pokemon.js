@@ -56,7 +56,7 @@ router.get("/box", verifyToken, async (req, res) => {
     const box = await Pokemon.find({
       user: req.user._id,
       location: "box",
-    }).sort({ createdAt: 1 });
+    }).sort({ pokeId: 1 });
 
     res.status(200).json(box);
   } catch (err) {
