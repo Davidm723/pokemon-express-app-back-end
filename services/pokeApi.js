@@ -21,6 +21,7 @@ const getPokemonData = async (nameOrId) => {
 
     return {
       pokeId: data.id,
+      sprite: data.sprites.front_default,
       name: data.name,
       types: data.types.map((t) => t.type.name),
       stats,

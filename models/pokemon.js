@@ -12,6 +12,7 @@ const pokemonSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
+    sprite: { type: String },
     name: {
       type: String,
       required: true,

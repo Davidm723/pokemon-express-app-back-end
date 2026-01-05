@@ -25,6 +25,7 @@ router.post("/", verifyToken, async (req, res) => {
     const newPokemon = await Pokemon.create({
       user: req.user._id,
       pokeId: pokeData.pokeId,
+      sprite: pokeData.sprite,
       name: pokeData.name,
       types: pokeData.types,
       stats: pokeData.stats,
